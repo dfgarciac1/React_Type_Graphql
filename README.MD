@@ -21,7 +21,7 @@ Con este comando le estamos añadiendo una dependcias al Json diciendole que per
  yarn add @mikro-orm/cli @mikro-orm/core @mikro-orm/migrations @mikro-orm/postgreesql pg
  ```
   * [mikro-orm](https://mikro-orm.io/docs/installation) - Documentación de mikro 
-  * [mikro E](https://mikro-orm.io/docs/installation) - Explicacion de mikro
+  * [mikro E](https://github.com/dfgarciac1/React_Type_Graphql/tree/main/EXPLI) - Explicacion de mikro
   
 
 ## TS CONFIG
