@@ -11,6 +11,12 @@ yarn add -D @types/node typescript
 ```
 Con este comando le estamos añadiendo una dependcias al Json diciendole que permita convertir de Type  => node (.js)
 
+```bash
+ yarn add -D nodemon
+ ```
+ Nodemon sirve para que cuando se haga un cambion en el server este recargue automaticamente 
+ * [Nodemon](https://www.npmjs.com/package/nodemon) - Documentación de Nodemon 
+
 ## TS CONFIG
 ```bash
 npx  tsconfig.json 
