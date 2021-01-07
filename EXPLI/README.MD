@@ -10,5 +10,5 @@ Surgio del libro de  Martin Fowler's llamado Patterns of Enterprise Application 
 # 1 Data Mapper 
 Esta nos habla de que la interfaz de un objeto para que incluya este patron tiene que incluir funciones como  Crear,Leer,Actualizar,borrar  por lo tanto representa la entrada de datos a una Base de datos 
  ```
- ![alt text](http://url/to/img.png)
+ ![Data Mapper](https://github.com/dfgarciac1/React_Type_Graphql/blob/main/EXPLI/Mapeado.png)
 
