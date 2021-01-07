@@ -13,7 +13,7 @@ Con este comando le estamos añadiendo una dependcias al Json diciendole que per
 ```bash
 npx  tsconfig.json 
 ```
-Con este comando estamos permitiendo  que la configuraricon de TS especifique los archivoz raiz para poder compilar parqa mayor informacion 
+Con este comando estamos permitiendo  que la configuraricon de TS especifique los archivoz raiz para poder compilar para mayor informacion 
 * [tsconfig](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html) - Documentación de TS 
 
   
