@@ -12,4 +12,3 @@ Esta nos habla de que la interfaz de un objeto para que incluya este patron tien
 
  ![Data Mapper](https://github.com/dfgarciac1/React_Type_Graphql/blob/main/EXPLI/Mapeado.png)
 
-
