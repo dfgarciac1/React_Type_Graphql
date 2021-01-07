@@ -17,6 +17,13 @@ Con este comando le estamos añadiendo una dependcias al Json diciendole que per
  Nodemon sirve para que cuando se haga un cambion en el server este recargue automaticamente 
  * [Nodemon](https://www.npmjs.com/package/nodemon) - Documentación de Nodemon 
 
+```bash
+ yarn add @mikro-orm/cli @mikro-orm/core @mikro-orm/migrations @mikro-orm/postgreesql pg
+ ```
+  * [mikro-orm](https://mikro-orm.io/docs/installation) - Documentación de mikro 
+  * [mikro E](https://mikro-orm.io/docs/installation) - Explicacion de mikro
+  
+
 ## TS CONFIG
 ```bash
 npx  tsconfig.json 
