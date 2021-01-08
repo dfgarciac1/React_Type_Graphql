@@ -10,7 +10,8 @@ export default {
 
     },
     entities:[Post],
-    dbName:'Mizog',
+    dbName:'postgres',
+    user:"davidpuerta",
     type:'postgresql',
-    debug: !__prod__ 
+    debug: process.env.NODE_ENV === "development",
 }as Parameters <typeof MikroORM.init>[0];

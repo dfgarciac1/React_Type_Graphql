@@ -5,10 +5,11 @@ import microConfig from "./mikro-orm.config"
 const main= async()  =>{
 
 const orm  =await MikroORM.init(microConfig);
-const post =orm.em.create(Post,{title:"Hola primer post"});
-await orm.em.persistAndFlush(post);
-console.log("____SQL1____");
-await orm.em.nativeInsert(Post,{title:"Segundo comentario"});
+await orm.getMigrator().up();
+// const post =orm.em.create(Post,{title:"Hola primer post"});
+// await orm.em.persistAndFlush(post);
+const posts = await orm.em.find(Post,{});
+console.log(posts);
 
 };
 main().catch((err) =>{
