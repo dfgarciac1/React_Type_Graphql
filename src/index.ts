@@ -15,6 +15,11 @@ await orm.getMigrator().up();
 //  await orm.em.persistAndFlush(post);
 //  const posts = await orm.em.find(Post,{});
 //  console.log(posts);
+
+
+
+
+
 const app = express();
 
 const apolloServer = new ApolloServer({

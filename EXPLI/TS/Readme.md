@@ -50,3 +50,48 @@ let color = "blue";
 color = 'red';
  ```
 Algo interesante es que se usa comilla doble (" ") cuando se usa el tipo String  pero tambien TS me permite usa comilla simple (' ')
+
+ ```bash
+let fullName: string = `Bob Bobbington`;
+let age: number = 37;
+let sentence: string = `Hello, my name is ${fullName}.
+
+I'll be ${age + 1} years old next month.`;
+ ```
+Para explicar esto en palabras simples  lo que estoy permitiendo es que  pueda concatentar una variable con ${} algo tambien interesante es que el bloque de let sentence se cierra hasta donde esta encuentre el ;
+
+## Array
+ ```bash
+ TS
+ let list: number[] = [1, 2, 3];
+
+ JS
+ "use strict";
+let list = [1, 2, 3];
+ ```
+ Cómo se puede notar los array toca decir de que tipo son y number[]  
+
+ ## Otra manera 
+  ```bash
+ TS
+ Lo que estoy declarando ente < > es de que tipo tiene que ser el arreglo donde pudiera poner String 
+let list: Array<number> = [1, 2, 3];
+
+ JS
+ "use strict";
+let list = [1, 2, 3];
+ ```
+
+ ## Tuple 
+Declarar una tupla 
+ ```bash
+let usuar_Inf: [string, number];
+ ```
+ Como se tiene que trabajar 
+
+  ```bash
+usuar_Inf=["Carlos",20]; => Es correcto 
+
+usuar_Inf=[20,"Carlos"]; => Es Incorrecto 
+ ```
+ El orden como se define ta tuple si importa y bastante 
