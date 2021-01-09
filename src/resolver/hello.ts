@@ -3,6 +3,6 @@ import {Resolver ,Query} from "type-graphql"
 export class HelloResolver{
  @Query(()=>String)
  hello(){
-     return "Hola mundo 2 y el pan"
+     return "Hola mundo que pasa"
  }
 }

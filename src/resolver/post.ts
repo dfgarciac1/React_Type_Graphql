@@ -1,9 +1,12 @@
-import { Post } from "src/entitys/Post"
-import {Resolver ,Query} from "type-graphql"
+import { Post } from "../entitys/Post"
+import { Mycontext } from "../types"
+import {Resolver ,Query, Ctx} from "type-graphql"
 @Resolver()
-export class HelloResolver{
+export class PostResolver{
  @Query(()=>[Post])
- posts(){
-     return "Hola mundo 2 y el pan"
+ posts(
+@Ctx() {em}:Mycontext
+ ){
+     return em.find(Post,{}) 
  }
 }
