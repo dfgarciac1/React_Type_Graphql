@@ -141,3 +141,17 @@ enum Color {
 }
 let c: Color = Color.Green;
  ```
+
+ ##  enum =>  mostrar que es lo que se almacena en la posicion 
+
+  ```bash
+enum Color {
+  Red = 1,
+  Green,
+  Blue,
+}
+let colorName: string = Color[2];
+
+// Displays 'Green'
+console.log(colorName);
+ ```
