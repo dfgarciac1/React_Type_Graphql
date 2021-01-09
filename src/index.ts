@@ -17,9 +17,6 @@ await orm.getMigrator().up();
 //  console.log(posts);
 
 
-
-
-
 const app = express();
 
 const apolloServer = new ApolloServer({

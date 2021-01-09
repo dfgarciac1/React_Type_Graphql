@@ -95,3 +95,49 @@ usuar_Inf=["Carlos",20]; => Es correcto
 usuar_Inf=[20,"Carlos"]; => Es Incorrecto 
  ```
  El orden como se define ta tuple si importa y bastante 
+
+
+## Acceder a una tupla 
+
+ ```bash
+console.log(usuar_Inf[0].substring(1)); => Esta sacaria 
+arlos ya que es lo que le estoy pidiendo 
+
+console.log(x[1].substring(1)); => Me sacaria un error al ser este de type number 
+ ```
+
+ ## Enum 
+
+ enum sirve para  saber  en que posicion esta una variable 
+  ```bash
+enum Color {
+  Red,
+  Green,
+  Blue,
+}
+let c: Color = Color.Green;
+si hago un console.log(c) => El resultado sera 1 ya que este se encuentra en esta posición 
+ ```
+
+ ## enum desde la posición 1 
+
+  ```bash
+enum Color {
+  Red = 1,
+  Green,
+  Blue,
+}
+let c: Color = Color.Green;
+si hago un console.log(c) => Este me sacaria las posición de 2 
+ ```
+
+## enum pero definiendo las posiciones 
+
+ ```bash
+enum Color {
+  Red = 1,
+  Green = 2,
+  Blue = 4,
+}
+let c: Color = Color.Green;
+ ```
