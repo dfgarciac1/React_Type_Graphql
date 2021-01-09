@@ -11,10 +11,10 @@ import {PostResolver} from "./resolver/post"
 const main= async()  =>{
 const orm  =await MikroORM.init(microConfig);
 await orm.getMigrator().up();
-// const post =orm.em.create(Post,{title:"Hola primer post"});
-// await orm.em.persistAndFlush(post);
-// const posts = await orm.em.find(Post,{});
-// console.log(posts);
+//  const post =orm.em.create(Post,{title:"Hola tercer post"});
+//  await orm.em.persistAndFlush(post);
+//  const posts = await orm.em.find(Post,{});
+//  console.log(posts);
 const app = express();
 
 const apolloServer = new ApolloServer({

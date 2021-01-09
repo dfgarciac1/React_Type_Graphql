@@ -3,6 +3,23 @@
 ## mikro 
 Es TypeScript ORM para node.js la cual esta basado en Data Mapper,Unit of work y identity map patterns 
 
+## ORM 
+Es el mapeo relacional de objetos permite convertir datos entre sistemas de tipo incopatible permitiendo escalar, en otras palabras 
+
+# Ejemplo 1 
+ Consulta sin ORM
+ ```bash
+var  sql  =  "SELECT id, first_name, last_name, phone, birth_date, sex, age FROM people WHERE id = 10" ; 
+var  resultado  =  contexto . Personas . FromSqlRaw ( sql ). ToList (); 
+var  name  =  result [ 0 ] [ "first_name" ];
+ ```
+
+ Consulta con ORM
+
+  ```bash
+var  person  =  repositorio . GetPerson ( 10 ); 
+var  firstName  =  persona . GetFirstName ();
+ ```
 ## ¿Qué es  Data Mapper,Unit of work y identity map patterns ?
 
 Surgio del libro de  Martin Fowler's llamado Patterns of Enterprise Application Architecture el cual esto son patrones orientados a objetos comenzemos uno a uno :
