@@ -1,7 +1,7 @@
  import { MikroORM} from "@mikro-orm/core";
  import 'reflect-metadata';
 import {__prod__} from "./constans";
-//import {Post } from "./entitys/Post";
+import {persona } from "./entitys/Persona";
 import microConfig from "./mikro-orm.config"
 import express from "express"
 import {ApolloServer} from "apollo-server-express"
@@ -11,10 +11,8 @@ import {PostResolver} from "./resolver/post"
 const main= async()  =>{
 const orm  =await MikroORM.init(microConfig);
 await orm.getMigrator().up();
-//  const post =orm.em.create(Post,{title:"Hola tercer post"});
-//  await orm.em.persistAndFlush(post);
-//  const posts = await orm.em.find(Post,{});
-//  console.log(posts);
+ // const Persona=orm.em.create(persona,{Nombre:"David",Genero:"Camion"});
+//await orm.em.persistAndFlush(Persona);
 
 
 const app = express();

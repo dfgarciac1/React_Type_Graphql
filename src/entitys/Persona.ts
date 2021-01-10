@@ -2,7 +2,7 @@ import { Entity, PrimaryKey, Property } from "@mikro-orm/core";
 import { Field, Int, ObjectType } from "type-graphql";
 @ObjectType()
 @Entity()
-export class PersonaObject {
+export class persona {
   @Field(()=>Int)
   @PrimaryKey()
   id!: number;
@@ -14,6 +14,9 @@ export class PersonaObject {
   updatedAt = new Date();
   @Field()
   @Property({type:"text"})
-  Name!: string;
+  Nombre!: string;
+  @Field()
+  @Property({type:"text"})
+  Genero!: string;
 
 }

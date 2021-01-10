@@ -1,5 +1,6 @@
 import { __prod__ } from "./constans";
 import { Post } from "./entitys/Post";
+import {persona} from "./entitys/Persona";
 import { MikroORM} from "@mikro-orm/core";
 import path from "path"
 console.log("Directorio", __dirname);
@@ -9,7 +10,7 @@ export default {
  pattern: /^[\w-]+\d+\.[tj]s$/,
 
     },
-    entities:[Post],
+    entities:[Post,persona],
     dbName:'postgres',
     user:"davidpuerta",
     type:'postgresql',
