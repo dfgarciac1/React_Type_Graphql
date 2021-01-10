@@ -27,3 +27,11 @@ type User {
   nombre : String 
 }
  ```
+
+
+ Notas 
+
+ ```bash
+Para generar una tabla necesito crear la tabla correspondiente por medio de una entity la cual al final por medio de  npx mikro-orm migration:create  le estoy pasando los parametros de esta misma  y me la genera con lo cual puedo usar GraphQL
+
+ ```
