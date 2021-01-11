@@ -13,8 +13,11 @@ export class persona {
   @Property({ type:"date",onUpdate: () => new Date() })
   updatedAt = new Date();
   @Field()
-  @Property({type:"text"})
+  @Property({type:"text",unique:true})
   Nombre!: string;
+  @Field()
+  @Property({type:"text",unique:true})
+  Password!: string;
   @Field()
   @Property({type:"text"})
   Genero!: string;

@@ -3,6 +3,7 @@ import { Post } from "./entitys/Post";
 import {persona} from "./entitys/Persona";
 import { MikroORM} from "@mikro-orm/core";
 import path from "path"
+import { User } from "./entitys/User";
 console.log("Directorio", __dirname);
 export default {
  migrations:{
@@ -10,7 +11,7 @@ export default {
  pattern: /^[\w-]+\d+\.[tj]s$/,
 
     },
-    entities:[Post,persona],
+    entities:[Post,User],
     dbName:'postgres',
     user:"davidpuerta",
     type:'postgresql',
