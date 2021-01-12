@@ -30,16 +30,51 @@ class userResponse{
 
 @Resolver()
 export class UserResolver{
-@Mutation(()=>User)
+@Mutation(()=>userResponse)
          async register(
              @Arg("options") options: UsernamePasswordInput ,
              @Ctx(){em}:Mycontext
-         ){
+         ):Promise<userResponse>{
+            if(options.username.length<=2){
+                return{
+                    errors: [
+                        {
+                           field:"Username",
+                        message:'Tu usuario es muy corto'  
+                       },
+                   ],
+                };
+             }
+             if(options.password.length<=3){
+                return{
+                    errors: [
+                        {
+                           field:"password",
+                        message:'Tu contraseña es muy corta'  
+                       },
+                   ],
+                };
+             }
         const hashedPassword = await  argon2.hash(options.password)
-        const user = em.create(User,{username:options.username,password:hashedPassword})
-        await em.persistAndFlush(user)
-             return user;
+        const user = em.create(User,
+            {username:options.username,password:hashedPassword
+            });
+       try{ 
+           await em.persistAndFlush(user);
          }
+         catch(err){
+             if(err.code==="23505"){
+                 return{
+                     errors:[{
+                         field:"username",
+                         message:"Usuario ya tomado"
+                     },
+                    ],
+                 };
+             }
+         }
+         return {user};
+        }
 
 
  @Query(()=>[User])
@@ -54,6 +89,7 @@ export class UserResolver{
              @Arg("options") options: UsernamePasswordInput ,
              @Ctx(){em}:Mycontext
          ) : Promise<userResponse>{
+    
    const user = await em.findOne(User,{username:options.username}); 
              if(!user ){
                  return{
