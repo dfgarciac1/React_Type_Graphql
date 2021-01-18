@@ -1,0 +1,117 @@
+.box{
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    display: block;
+}
+.Titulo{
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;                                                      
+    font-weight: 700;
+    cursor: default;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+    font-size: 16px;
+    line-height: 1.5;                                                                                                                                                                                                                                                                                                   
+    font-family: circular-spotify-ui,Helvetica Neue,Helvetica,Arial,sans-serif;
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.btn-primary{
+    position: relative;
+  display:inline-block;
+  padding: 16px 48px 18px;
+  font-size: 14px;
+  line-height: 1;
+  white-space: normal;
+    text-decoration: none;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.8);
+  background: #6b82b1;
+  letter-spacing: 2px;
+  padding: 14px;
+  border-radius: 500px;
+  }
+  .btn-primary:hover{background-color: #ebb0e8; 
+  color: white;
+  }
+  .Tform{
+    box-shadow: rgb(189, 189, 189) 0px 0px 0px 1px inset;
+    margin-top: 8px;
+    border-radius: 4px;
+    padding: 8px;
+    border: none;   
+}
+.Alberto{
+    height: 250px;
+    width: 250px;
+    min-height: 25vh;
+    display: flex;
+
+}
+.Cuerpo1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 20vh;
+}
+.Cuerpo2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Divisor {
+    border-top: 1px solid rgb(189, 189, 189);
+    content: "";
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px auto 1em;
+}
+.Pata{
+    position: relative;
+    display:inline-block;
+    text-decoration: none;
+    border: 1px solid transparent;
+    transition-duration: .3s;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.8);
+    background: #6b82b1;
+    letter-spacing: 2px;
+    padding-top: 14px;
+    border-radius: 500px;
+    padding: 16px 14px 18px;    }
+    .Pata:hover {
+      background-color: #4CAF50; /* Green */
+      color: white;
+    }
+    .Pata2{
+        position: relative;
+        display:inline-block;
+        text-decoration: none;
+        border: 1px solid transparent;
+        transition-duration: .3s;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.8);
+        background: #cc6a6a;
+        letter-spacing: 2px;
+        padding-top: 14px;
+        border-radius: 500px;
+        padding: 16px 14px 18px;    }
+        .Pata2:hover {
+          background-color: #ab57db; /* Green */
+          color: white;
+        }
+    .olvida{
+        color: #616467;
+        cursor: progress;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+    text-decoration: underline;
+}
+.olvida:hover{
+    color: #86aed6;
+
+}
