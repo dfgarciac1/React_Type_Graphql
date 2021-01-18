@@ -59,8 +59,8 @@ export class UserResolver {
       return {
         errors: [
           {
-            field: "Username",
-            message: "Tu usuario es muy corto",
+            field: "username",
+            message: "Tu usuario es muy corto debe ser mayor a 2",
           },
         ],
       };
@@ -70,7 +70,7 @@ export class UserResolver {
         errors: [
           {
             field: "password",
-            message: "Tu contraseña es muy corta",
+            message: "Tu contraseña es muy corta debe ser mayor a 3",
           },
         ],
       };
