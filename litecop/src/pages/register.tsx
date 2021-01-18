@@ -1,20 +1,20 @@
 import React from "react";
-import { Form, Formik } from "formik";
+import { Field, Form, Formik } from "formik";
 import { InputField } from "../components/InputField";
 import { Box, Button } from "@chakra-ui/react";
 import { Wrapper } from "../components/Wrapper";
 import { useMutation } from "urql";
 const macbookIphone = require("../pages/alberto.png");
 import Head from 'next/head'
+import { useRegisterMutation } from "../generated/graphql";
+import { toErrorMap } from "../utils/toErrorMap";
 interface registerProps {}
 {/* <div>
 <img src={macbookIphone} className="Alberto" />
 </div> */}
 
-const Register_Muta =
-  " mutation Register($username: String!, $password: String!) {register(options: { username: $username, password: $password }) {errors {field message     }      user {        id createdAt         updatedAt username password      } }} ";
 export const Register: React.FC<registerProps> = ({}) => {
-  const [, register] = useMutation(Register_Muta);
+  const [,   register] = useRegisterMutation();
   return (
     
     <div className="box">
@@ -25,8 +25,13 @@ export const Register: React.FC<registerProps> = ({}) => {
     </Head>
       <Formik
         initialValues={{ username: " ", password: " " }}
-        onSubmit={(values) => {
-          register(values);
+        onSubmit={async(values,{ setErrors }) => {
+          const response =await register(values);
+          if (response.data?.register.errors) {
+            console.log (response.data?.register.errors)
+            setErrors(toErrorMap(response.data?.register.errors));
+             }
+             
         }}
       >
         {({}) => (
@@ -51,15 +56,15 @@ export const Register: React.FC<registerProps> = ({}) => {
               <InputField
                 className="Tform"
                 name="username"
-                placeholder="Usuario"
-                label="Username"
+              placeholder="username"
+              label="Username"
               />
             </div>
             <div className="Cuerpo1">
               <InputField
                 className="Tform"
                 name="password"
-                placeholder="Password"
+                placeholder="password"
                 label="Password"
                 type="password"
               />

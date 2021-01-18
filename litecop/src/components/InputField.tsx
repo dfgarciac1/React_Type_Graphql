@@ -11,12 +11,12 @@ type InputFieldProps= InputHTMLAttributes<HTMLInputElement> &{
 export const InputField: React.FC<InputFieldProps>=({label,size: _,...props})=>{
 const [field,{error ,}] =useField(props);
 return(
-    <form>
-        <label htmlFor={field.name} className="Titulo">{label}</label>
+    <FormControl isInvalid={!!error} className="Cuerpo1">
+        <label htmlFor={field.name} >{label}</label>
         <input{...field} {...props} id={field.name} ></input>
         {error? <FormErrorMessage>{error}</FormErrorMessage>: null}
-    </form>
-)
+        </FormControl>
+        )
 
 
 }
